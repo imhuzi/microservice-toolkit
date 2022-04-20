@@ -234,7 +234,7 @@ microservice-toolkit  是 以 OpenAPI Specification (OAS)  规范(2.0 或者 3.0
 
 #### Dubbo 开发模式： 
 就是 纯 Dubbo Service 定义方式， 如下图：
-[图](./docs/img/image2021-8-13_11-15-39.png)
+![图](./docs/img/image2021-8-13_11-15-39.png)
 
 基于 上图 生成的  Oas 元信息如下：
 ```json
