@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.uyibai.microservice.toolkit.oas.starter.DubboOasAutoConfiguration,\
+com.uyibai.microservice.toolkit.oas.starter.aspectJ.ParameterValidatorAspectJ

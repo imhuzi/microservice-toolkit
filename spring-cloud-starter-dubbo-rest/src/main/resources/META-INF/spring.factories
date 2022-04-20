@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.ddwl.spring.cloud.starter.dubbo.rest.config.DubboServiceBeanMetadataFixResolver
