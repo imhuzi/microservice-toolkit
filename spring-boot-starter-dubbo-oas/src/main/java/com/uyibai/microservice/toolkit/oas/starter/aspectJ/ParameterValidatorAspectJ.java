@@ -1,8 +1,8 @@
 package com.uyibai.microservice.toolkit.oas.starter.aspectJ;
 
-import com.uyibai.microservice.common.api.ExecuteCode;
-import com.uyibai.microservice.common.api.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
+
+import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -21,6 +21,8 @@ import javax.annotation.PostConstruct;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Parameter;
 import java.util.List;
+
+import com.ddweilai.microservice.common.api.ExecuteCode;
 
 @Aspect
 @Component
@@ -62,7 +64,7 @@ public class ParameterValidatorAspectJ {
                         List<ObjectError> allErrors = beanPropertyBindingResult.getAllErrors();
                         if (!ObjectUtils.isEmpty(allErrors)) {
                             log.info("StartParamValidFalse:{}", allErrors);
-                            throw new BusinessException(ExecuteCode.PARAM_EXCEPTION.getCode(), allErrors.get(0).getDefaultMessage());
+                            throw new IllegalArgumentException(StringUtils.defaultString(allErrors.get(0).getDefaultMessage(),"Param Error"));
                         }
                         break;
                     }
