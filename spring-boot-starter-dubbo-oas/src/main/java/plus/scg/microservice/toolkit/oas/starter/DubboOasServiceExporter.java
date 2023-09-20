@@ -1,5 +1,6 @@
 package plus.scg.microservice.toolkit.oas.starter;
 
+import jakarta.annotation.PreDestroy;
 import plus.scg.microservice.toolkit.oas.DubboOasService;
 import org.apache.dubbo.common.URL;
 import org.apache.dubbo.config.ApplicationConfig;
@@ -11,7 +12,6 @@ import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
-import javax.annotation.PreDestroy;
 import java.util.List;
 
 public class DubboOasServiceExporter {

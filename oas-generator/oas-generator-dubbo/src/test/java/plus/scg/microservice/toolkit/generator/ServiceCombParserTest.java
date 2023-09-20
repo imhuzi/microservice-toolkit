@@ -17,7 +17,6 @@
 
 package plus.scg.microservice.toolkit.generator;
 
-import plus.scg.microservice.common.api.ResData;
 import plus.scg.microservice.toolkit.generator.context.OasGenerator;
 import plus.scg.microservice.toolkit.generator.parser.DubboJaxrsParser;
 import plus.scg.microservice.toolkit.generator.parser.DubboPojoParser;
@@ -140,12 +139,6 @@ public class ServiceCombParserTest {
         public UserInfo batchCreate(List<UserInfo> users) {
             return null;
         }
-
-        @Override
-        public ResData<UserInfo> batchArray(UserInfo[] users) {
-            return null;
-        }
-
         @Override
         public void batchMap(Map<String, UserInfo> users) {
         }
@@ -186,11 +179,6 @@ public class ServiceCombParserTest {
         }
 
         @Override
-        public ResData<UserInfo> batchArray(@RequestBody UserInfo[] users) {
-            return null;
-        }
-
-        @Override
         public void batchMap(@RequestBody  Map<String, UserInfo> users) {
         }
 
@@ -226,12 +214,6 @@ public class ServiceCombParserTest {
         public UserInfo batchCreate(List<UserInfo> users) {
             return null;
         }
-
-        @Override
-        public ResData<UserInfo> batchArray(UserInfo[] users) {
-            return null;
-        }
-
         @Override
         public void batchMap(Map<String, UserInfo> users) {
         }

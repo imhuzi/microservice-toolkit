@@ -56,13 +56,6 @@
     </distributionManagement>
     <repositories>
         <repository>
-            <id>nexus</id>
-            <name>nexus</name>
-            <url>http://nexus.1d1d100.net/nexus/content/groups/public/</url>
-            <releases><enabled>true</enabled><updatePolicy>always</updatePolicy></releases>
-            <snapshots><enabled>true</enabled><updatePolicy>always</updatePolicy></snapshots>
-        </repository>
-        <repository>
             <id>jcenter-snapshots</id>
             <name>jcenter</name>
             <url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
@@ -70,7 +63,7 @@
     </repositories>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
@@ -78,7 +71,7 @@
         <swagger.version>2.0.10</swagger.version>
         <swagger-codegen.version>2.4.3</swagger-codegen.version>
         <junit.version>4.12</junit.version>
-        <asm.version>7.2</asm.version>
+        <asm.version>9.5</asm.version>
         <powermock.version>1.6.2</powermock.version>
         <javachassis.version>1.2.0</javachassis.version>
         <airline.version>0.7</airline.version>
@@ -92,17 +85,15 @@
         <swagger-parser.version>2.0.15</swagger-parser.version>
         <commons-collections4.version>4.3</commons-collections4.version>
         <commons-io.version>2.6</commons-io.version>
-        <spring-boot.version>2.4.2</spring-boot.version>
-        <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
-        <fabric8.dmp.version>0.28.0</fabric8.dmp.version>
+        <spring-boot.version>3.1.3</spring-boot.version>
         <maven-compat.version>3.2.2</maven-compat.version>
         <webjars.version>4.3.1</webjars.version>
 
         <maven.surefire.version>3.0.0-M3</maven.surefire.version>
         <maven-plugin-plugin.version>3.5</maven-plugin-plugin.version>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-        <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
-        <maven-resources-plugin.version>3.0.0</maven-resources-plugin.version>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
         <maven-plugin-testing-harness.version>3.3.0</maven-plugin-testing-harness.version>
         <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
@@ -269,9 +260,23 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>25.1-jre</version>
+                <version>30.1.1-jre</version>
             </dependency>
-
+<!--            <dependency>-->
+<!--                <groupId>javax.annotation</groupId>-->
+<!--                <artifactId>javax.annotation-api</artifactId>-->
+<!--                <version>1.3.2</version>-->
+<!--            </dependency>-->
+            <dependency>
+                <groupId>jakarta.annotation</groupId>
+                <artifactId>jakarta.annotation-api</artifactId>
+                <version>2.1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.validation</groupId>
+                <artifactId>jakarta.validation-api</artifactId>
+                <version>3.0.2</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
@@ -283,8 +288,8 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <configuration>
-                        <source>8</source>
-                        <target>8</target>
+                        <source>17</source>
+                        <target>17</target>
                         <compilerArgument>-parameters</compilerArgument>
                     </configuration>
                 </plugin>

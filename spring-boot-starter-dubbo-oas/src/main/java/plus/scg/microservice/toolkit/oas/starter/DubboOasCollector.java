@@ -1,5 +1,6 @@
 package plus.scg.microservice.toolkit.oas.starter;
 
+import jakarta.annotation.PreDestroy;
 import plus.scg.microservice.toolkit.generator.context.OasGenerator;
 import plus.scg.microservice.toolkit.oas.model.OasApplicationMeta;
 import plus.scg.microservice.toolkit.oas.model.OasMethod;
@@ -16,7 +17,6 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
-import javax.annotation.PreDestroy;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;

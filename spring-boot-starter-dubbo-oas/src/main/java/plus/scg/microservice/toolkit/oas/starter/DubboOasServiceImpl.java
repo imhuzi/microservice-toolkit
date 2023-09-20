@@ -1,12 +1,12 @@
 package plus.scg.microservice.toolkit.oas.starter;
 
+import jakarta.annotation.Resource;
 import plus.scg.microservice.toolkit.oas.DubboOasService;
 import plus.scg.microservice.toolkit.oas.model.OasApplicationMeta;
 import io.swagger.v3.core.util.Json;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.Set;
 
 @Service
