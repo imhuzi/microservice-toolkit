@@ -1,11 +1,11 @@
 Microservice Toolkit
 ---
-本项目主要是为了生成微服务文档，以及网关需要的元数据，方便网关进行Http请求转发。
+本项目主要是为了生成微服务文档，以及让dubbo等RPC框架快速接入spring-cloud-gateway。
 
 主要功能是：
 1. 生成 基于 Open Api 2.0 或者 3.0 的 swagger 格式json。 这样 大家在 基于 网关的 微服务开发模式是，只需要给 Dubbo Service 的实现类 加上 相关的 swagger 2.0，或者 3.0 的注解即可。就跟 普通的  Spring Mvc 项目一样，生成 相关文档。;
 2. 生成 Oas(OpenAPI Specification) 元信息方便网关基于Oas信息发起Rpc调用。
-3. 实现不同RPC框架实现，已支持Dubbo，spring-boot-starter-dubbo-oas
+3. 实现不同RPC框架接入方便快捷的接入spring-cloud-gateway，已支持Dubbo
 
 参考  Spring-cloud-starter-dubbo  和  dubbo-spi-extensions/blob/2.7.x/dubbo-api-docs 实现 
 
